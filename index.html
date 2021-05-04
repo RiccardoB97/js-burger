@@ -12,14 +12,19 @@
     <!-- Site header-->
     <header id="site_header">
         <h1>Create Your Burger</h1>
+        <img src="./assets/img/burger-top.png" alt="">
     </header>
     <!-- /Site header -->
 
     <!-- Site main -->
     <main id="site_main">
-        <input type="text" placeholder="Name Your Burger">
+        <input type="text" placeholder="Name Your Burger" id="burger_name">
         <h3>Ingredients</h3>
         <section class="ingredients">
+        </section>
+        <section class="coupon">
+            <span>Discount Coupon</span>
+            <input type="text" name="discount" id="discount" placeholder="12345ABCDE">
         </section>
         <section class="calc">
             <button>calculate</button>
@@ -30,7 +35,7 @@
     <!-- Site footer -->
     <footer id="site_footer">
         <h4>Your price</h4>
-        <h4 class="price"></h4>
+        <h4 id="price"></h4>
     </footer>
     <!-- /Site footer -->
 

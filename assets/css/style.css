@@ -16,13 +16,20 @@ HEADER
 ***********/
 #site_header{
     background-color: #FDBB40;
-    width: 50%;
+    width:550px;
     height: 10vh;
     display: flex;
     align-items: flex-end;
     padding: 10px;
+    position: relative;
 }
 
+header img{
+    width: 150px;
+    position: absolute;
+    top: -25px;
+    right: -50px;
+}
 
 h1{
     font-weight: bold   ;
@@ -35,7 +42,7 @@ MAIN
 
 #site_main{
     background-color: white;
-    width:50%;
+    width:550px;
     height: 75vh;
     display: flex;
     flex-direction: column;
@@ -46,10 +53,11 @@ MAIN
     margin-right: 10px;
 }
 
-#site_main input{
+#site_main #burger_name{
     font-size: 1.5rem;
     margin: 20px;
     border: none;
+    width: 50%;
 }
 
 h3{
@@ -68,11 +76,28 @@ h3{
 .ingredients span{
     color: #D33359;
 }
+.ingredients input{
+    margin: 15px;
+}
 
 .ingredients .form-group{
     display: flex;
     align-items: center;
     padding: 10px 20px;
+}
+
+#site_main #discount {
+    width: 40%;
+    display:inline-block;
+}
+
+.coupon span{
+    display: inline-block
+}
+
+.coupon{
+    margin: 20px;
+    margin-top: 0;
 }
 
 .calc{
@@ -98,7 +123,7 @@ FOOTER
 
 #site_footer{
     background-color: #D33359;
-    width: 50%;
+    width:550px;
     color: white;
     height: 15vh;
     display: flex;

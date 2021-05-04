@@ -25,10 +25,33 @@ function renderIngredients(list, el) {
         </div >
         `)
         counter++
-        console.log(counter[0]);
     }
-}
+};
 
 var ingredientsEl = document.querySelector('.ingredients');
 renderIngredients(ingredients, ingredientsEl)
 
+// Generates price when clicked
+document.querySelector('button').addEventListener('click', function () {
+    // Checks that a burger name has been inserted
+    var burgerName = document.getElementById('burger_name').value;
+    if (burgerName === "") {
+        alert('Please name your burger')
+    } else {
+        // Standard price of the hamburger
+        var basePrice = 8.5;
+        // Increase the base price for each clicked checkbox
+        var checks = document.querySelectorAll('input[type="checkbox"]')
+        var sumIngredients = null;
+        for (var i = 0; i < checks.length; i++) {
+            var element = checks[i];
+            if (element.checked) {
+                sumIngredients += Number(element.getAttribute('data-price'));
+            }
+        }
+        var finalPrice = basePrice + sumIngredients;
+        // Checks if there s a discount and applies it
+        document.getElementById('price').innerHTML = '$ ' + finalPrice
+    }
+
+});
