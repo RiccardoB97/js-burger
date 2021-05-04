@@ -18,8 +18,7 @@ body{
 /*********
 HEADER
 ***********/
-#site_header{
-    height: 120px;
+#site_header .container{
     background-color: #FDBB40;
 }
 
@@ -33,7 +32,7 @@ h1{
 MAIN
 ***********/
 
-#site_main{
+#site_main .container{
     padding: 20px;
 }
 
@@ -41,7 +40,7 @@ MAIN
 /*********
 FOOTER
 ***********/
-#site_footer{
+#site_footer .container{
     background-color:#D33359;
     height:120px;
 }
