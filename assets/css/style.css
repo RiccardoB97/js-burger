@@ -10,17 +10,19 @@ body{
     font-size: 14px;
 }
 
-.container{
-    max-width: 600px;
-    height:100%;
-    background-color: white;
+.wrapper{
+display: flex;
+flex-direction: column;
 }
+
 /*********
 HEADER
 ***********/
-#site_header .container{
+#site_header{
     background-color: #FDBB40;
+    width: 50%;
 }
+
 
 h1{
     padding: 60px 0 20px 30px;
@@ -32,15 +34,21 @@ h1{
 MAIN
 ***********/
 
-#site_main .container{
-    padding: 20px;
+#site_main{
+    background-color: white;
+    width:50%;
 }
 
+#site_main img{
+    height:30px;
+}
 
 /*********
 FOOTER
 ***********/
-#site_footer .container{
-    background-color:#D33359;
-    height:120px;
+
+#site_footer{
+    background-color: #D33359;
+    width: 50%;
+    color: white;
 }
