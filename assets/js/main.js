@@ -51,6 +51,11 @@ document.querySelector('button').addEventListener('click', function () {
         }
         var finalPrice = basePrice + sumIngredients;
         // Checks if there s a discount and applies it
+        var listCoupon = ["abc", 'cde', '123', 'riccardo']
+        var userCoupon = document.getElementById('discount').value;
+        if (listCoupon.includes(userCoupon)) {
+            finalPrice -= finalPrice * 0.2;
+        }
         document.getElementById('price').innerHTML = '$ ' + finalPrice
     }
 
