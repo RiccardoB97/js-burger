@@ -12,15 +12,16 @@ var ingredients = [
     ['ketchup', '0.5']
 ]
 
-
+// Inserts a form group inside the HTML
 function renderIngredients(list, el) {
     var counter = 0;
     while (counter < list.length) {
         el.insertAdjacentHTML('beforeend', `
-        <img src="./assets/img/${list[counter][0]}.svg"
         <div class="form-group">
-            <label for="${list[counter][0]}">${list[counter][0]}</label>
+        <img src="./assets/img/${list[counter][0]}.svg"
+            <label for="${list[counter][0]}">${list[counter][0].charAt(0).toUpperCase() + list[counter][0].slice(1)}</label>
             <input type="checkbox" name="${list[counter][0]}" id="${list[counter][0]} " data-price="${list[counter][1]} ">
+            <span>add</span>
         </div >
         `)
         counter++
@@ -30,3 +31,4 @@ function renderIngredients(list, el) {
 
 var ingredientsEl = document.querySelector('.ingredients');
 renderIngredients(ingredients, ingredientsEl)
+

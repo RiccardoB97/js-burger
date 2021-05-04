@@ -10,10 +10,6 @@ body{
     font-size: 14px;
 }
 
-.wrapper{
-display: flex;
-flex-direction: column;
-}
 
 /*********
 HEADER
@@ -21,11 +17,14 @@ HEADER
 #site_header{
     background-color: #FDBB40;
     width: 50%;
+    height: 10vh;
+    display: flex;
+    align-items: flex-end;
+    padding: 10px;
 }
 
 
 h1{
-    padding: 60px 0 20px 30px;
     font-weight: bold   ;
     font-size:2rem;
 }
@@ -37,11 +36,61 @@ MAIN
 #site_main{
     background-color: white;
     width:50%;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
 }
 
 #site_main img{
-    height:30px;
+    height:40px;
+    margin-right: 10px;
 }
+
+#site_main input{
+    font-size: 1.5rem;
+    margin: 20px;
+    border: none;
+}
+
+h3{
+    margin-left: 20px;
+    font-weight: 200;
+    font-size:1.2rem;
+}
+
+.ingredients{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 60%;
+}
+
+.ingredients span{
+    color: #D33359;
+}
+
+.ingredients .form-group{
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.calc{
+    display: flex;
+    justify-content: center;
+}
+
+.calc button{
+    padding:10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color:#FDBB40;
+    font-size: 1rem;
+    font-weight: 900;
+}
+
+
+
 
 /*********
 FOOTER
@@ -51,4 +100,10 @@ FOOTER
     background-color: #D33359;
     width: 50%;
     color: white;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 1.3rem;
+    justify-content: space-between;
 }
